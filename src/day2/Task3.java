@@ -8,7 +8,7 @@ public class Task3 {
         Scanner scanner = new Scanner(System.in);
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
-        while (num1 <= num2) {
+        while (num1+1 <= num2-1) {
             num1++;
             if (num1 % 5 == 0 && num1 % 10 != 0) {
                 System.out.println(num1);
