@@ -7,22 +7,26 @@ public class Task4 {
         int m = 10;
         int[] array = new int[m];
         for (int i = 0; i < array.length; i++) {
-            array[i] = ((int) (0 + Math.random() * 5));
+            array[i] = ((int) (Math.random() * 50));
         }
         System.out.println("Сгененированный массив: " + Arrays.toString(array));
 
 
-        for (int i = 0; i < array.length; i++) {
-            int count1 = array[i];
-            int count2 = array[i + 1];
-            int count3 = array[i + 2];
-            int sum = count1 + count2 + count3;
-//            int nextSum;
-//            if (sum > nextSum)
-//                nextSum = sum;
-//                System.out.println(nextSum);
+        int maxSum = 0;
+        int maxSumIndex = 0;
+        for (int i = 0; i < array.length - 2; i++) {
+            int sum = 0;
+            for (int j = i; j < i + 3; j++) {
+                sum += array[j];
+            }
+            if (sum > maxSum) {
+                maxSum = sum;
+                maxSumIndex = i;
             }
         }
+        System.out.println(maxSum);
+        System.out.println(maxSumIndex);
     }
+}
 
 

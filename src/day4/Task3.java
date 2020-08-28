@@ -2,7 +2,6 @@ package day4;
 
 import java.util.Arrays;
 
-
 public class Task3 {
 
     public static void main(String[] args) {
@@ -11,7 +10,7 @@ public class Task3 {
         int[][] array = new int[m][n];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                array[i][j] = ((int) (0 + Math.random() * 50));
+                array[i][j] = ((int) (Math.random() * 50));
                 System.out.print(array[i][j] + "   ");
             }
             int sum = Arrays.stream(array[i]).sum();
