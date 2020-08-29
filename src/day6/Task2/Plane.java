@@ -1,7 +1,5 @@
 package day6.Task2;
 
-import java.util.Scanner;
-
 public class Plane {
     String producer;
     int yearOfProduce;

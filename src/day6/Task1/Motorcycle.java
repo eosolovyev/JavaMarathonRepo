@@ -1,7 +1,5 @@
 package day6.Task1;
 
-import java.util.Scanner;
-
 class Motorcycle {
     private int yearMotorcycle;
     private String colorMotorcycle;
