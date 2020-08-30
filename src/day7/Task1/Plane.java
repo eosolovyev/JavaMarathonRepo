@@ -1,10 +1,10 @@
-package day6.Task2;
+package day7.Task1;
 
 public class Plane {
-    private String producer;
+    private final String producer;
     private int yearOfProduce;
     private int length;
-    private int weight;
+    private final int weight;
     private int fuelTank;
 
     public Plane(String producer, int yearOfProduce, int length, int weight) {
@@ -30,5 +30,13 @@ public class Plane {
     public void fillUp(int fuelNew) {
         fuelTank += fuelNew;
         System.out.println("Бак залит на: " + fuelNew);
+    }
+
+    public static String planeDifference(Plane plane1, Plane plane2) {
+        if (plane1.length > plane2.length) {
+            return "Самолет 1 длиннее";
+        } else {
+            return "Самолет 2 длиннее";
+        }
     }
 }

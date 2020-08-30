@@ -1,6 +1,5 @@
 package day6.Task1;
 
-import java.util.Scanner;
 
 public class Car {
     private int yearCar;
@@ -38,11 +37,8 @@ public class Car {
         System.out.println("Это автомобиль");
     }
 
-    public void carDifference() {
-        System.out.println("Введите год для авто");
-        Scanner scanner = new Scanner(System.in);
-        int yearNew = scanner.nextInt();
-        int x = yearCar - yearNew;
-        System.out.println("Разница лет для авто: " + x);
+
+    public int carDifference(int yearNew) {
+        return yearNew - yearCar;
     }
 }

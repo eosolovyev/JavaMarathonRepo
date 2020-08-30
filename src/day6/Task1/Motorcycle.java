@@ -1,9 +1,9 @@
 package day6.Task1;
 
 class Motorcycle {
-    private int yearMotorcycle;
-    private String colorMotorcycle;
-    private String modelMotorcycle;
+    private final int yearMotorcycle;
+    private final String colorMotorcycle;
+    private final String modelMotorcycle;
 
 
     public Motorcycle(int yearMotorcycle, String colorMotorcycle, String modelMotorcycle) {
@@ -28,10 +28,9 @@ class Motorcycle {
         System.out.println("Это мотоцикл");
     }
 
-    int yearNew = 1980;
-    public void motorcycleDifference() {
-        int x = yearMotorcycle - yearNew;
-        System.out.println("Разница лет для мотоцикла: " + x);
+
+    public int motorcycleDifference(int yearNew) {
+        return yearNew - yearMotorcycle;
     }
 }
 

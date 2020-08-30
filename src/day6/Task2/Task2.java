@@ -7,9 +7,9 @@ public class Task2 {
         plane.setYearOfProduce(2010);
         plane.setLength(55);
 
-        int fuelNewNew = 10;
 
         for (int i = 0; i < 2; i++) {
+            int fuelNewNew = ((int) (Math.random() * 20));
             plane.fillUp(fuelNewNew);
         }
         plane.info();

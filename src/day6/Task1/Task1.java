@@ -12,7 +12,8 @@ public class Task1 {
         car.thisCar();
         motorcycle.thisMotorcycle();
 
-        car.carDifference();
-        motorcycle.motorcycleDifference();
+        int yearNew = 2020;
+        System.out.println("Разница лет для авто: " + car.carDifference(yearNew));
+        System.out.println("Разница лет для мотоцикла: " + motorcycle.motorcycleDifference(yearNew));
     }
 }

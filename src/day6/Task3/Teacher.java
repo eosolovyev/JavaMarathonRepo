@@ -5,6 +5,7 @@ import java.util.Random;
 class Teacher {
     private String fio;
     private String article;
+    private String markLetter;
 
     public Teacher(String fio, String article) {
         this.fio = fio;
@@ -27,9 +28,6 @@ class Teacher {
         this.article = article;
     }
 
-    String markLetter;
-
-
     public void markStudent(Student student) {
         Random random = new Random();
         int mark = 2 + random.nextInt(4);
@@ -47,7 +45,7 @@ class Teacher {
                 markLetter = "отлично";
                 break;
         }
-        System.out.printf("Преподаватель %s оценил студента с именем %s по предмету %s на оценку %s%n", fio, student.getFio(), article, markLetter);
+        System.out.printf("Преподаватель %s оценил студента с именем %s по предмету %s на оценку %s%n", this.fio, student.getFio(), this.article, this.markLetter);
     }
 }
 
