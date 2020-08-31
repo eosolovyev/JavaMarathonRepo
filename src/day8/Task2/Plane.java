@@ -1,10 +1,10 @@
-package day7.Task1;
+package day8.Task2;
 
 public class Plane {
-    private final String producer;
+    private String producer;
     private int yearOfProduce;
     private int length;
-    private final int weight;
+    private int weight;
     private int fuelTank;
 
     public Plane(String producer, int yearOfProduce, int length, int weight) {
@@ -23,7 +23,7 @@ public class Plane {
         this.length = length;
     }
 
-    public void info() {
+    public void info(String s) {
         System.out.printf("Изготовитель: %s, год выпуска: %d, длина: %d, вес: %d, объем топлива в баке: %d%n", producer, yearOfProduce, length, weight, fuelTank);
     }
 
@@ -32,13 +32,14 @@ public class Plane {
         System.out.println("Бак залит на: " + fuelNew);
     }
 
-    public static String planeDifference(Plane plane1, Plane plane2) {
-        if (plane1.length > plane2.length) {
-            return "Самолет 1 длиннее";
-        } else if (plane1.length < plane2.length){
-            return "Самолет 2 длиннее";
-        } else {
-            return "Длины самолетов равны";
-        }
+    @Override
+    public String toString() {
+        return "Plane{" +
+                "producer='" + producer + '\'' +
+                ", yearOfProduce=" + yearOfProduce +
+                ", length=" + length +
+                ", weight=" + weight +
+                ", fuelTank=" + fuelTank +
+                '}';
     }
 }
