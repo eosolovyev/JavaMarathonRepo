@@ -5,7 +5,7 @@ public class Task1 {
         Student student = new Student("Евгений", "МР12");
         Teacher teacher = new Teacher("Иван Иванович", "Алгебра");
 
-        System.out.println(student.getName());
+        System.out.println(student.getGroupName());
         System.out.println(teacher.getNameOfArticle());
 
         student.printInfo();

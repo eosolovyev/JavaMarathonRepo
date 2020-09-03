@@ -1,7 +1,7 @@
 package day9.Task1;
 
 public class Human {
-    private String name;
+    protected String name;
 
     public String getName() {
         return name;
@@ -13,9 +13,6 @@ public class Human {
 
     public Human(String name) {
         this.name = name;
-    }
-
-    public Human() {
     }
 
     public void printInfo() {
