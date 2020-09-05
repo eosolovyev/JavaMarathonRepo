@@ -2,29 +2,34 @@ package day11;
 
 public class Picker implements Worker {
     private int salary;
-    private int temp1;
-    Warehouse warehouse = new Warehouse();
+    private Warehouse warehouse;
+
+    public Picker(Warehouse warehouse) {
+        this.warehouse = warehouse;
+    }
 
     public int getSalary() {
         return salary;
     }
 
-    public int getTemp1() {
-        return temp1;
-    }
 
     @Override
     public void doWork() {
-        temp1++;
         salary += 80;
-        warehouse.setCountOrder(getTemp1());
+        warehouse.setCountOrder(warehouse.getCountOrder() + 1);
     }
-
 
     @Override
     public void bonus() {
         if (warehouse.getCountOrder() % 1500 == 0) {
             salary = salary * 3;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Picker{" +
+                "salary=" + salary +
+                '}';
     }
 }

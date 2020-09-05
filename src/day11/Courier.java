@@ -2,8 +2,11 @@ package day11;
 
 public class Courier implements Worker {
     private int salary;
-    public int temp2;
-    Warehouse warehouse = new Warehouse();
+    private final Warehouse warehouse;
+
+    public Courier(Warehouse warehouse) {
+        this.warehouse = warehouse;
+    }
 
     public int getSalary() {
         return salary;
@@ -12,15 +15,21 @@ public class Courier implements Worker {
 
     @Override
     public void doWork() {
-        temp2 = temp2 + 1000;
         salary += 100;
-        warehouse.setBalance(temp2);
+        warehouse.setBalance(warehouse.getBalance() + 1000);
     }
 
     @Override
     public void bonus() {
         if (warehouse.getBalance() % 1000000 == 0) {
-            salary += salary;
+            salary *= 2;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Courier{" +
+                "salary=" + salary +
+                '}';
     }
 }

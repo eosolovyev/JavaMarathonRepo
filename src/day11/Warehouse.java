@@ -1,8 +1,8 @@
 package day11;
 
 public class Warehouse {
-    private static int countOrder;
-    private static int balance ;
+    private int countOrder;
+    private int balance ;
 
     public int getCountOrder() {
         return countOrder;
