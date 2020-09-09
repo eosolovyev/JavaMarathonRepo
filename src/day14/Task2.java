@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[] args) {
         System.out.println(parseFileToStringList());
-
     }
 
     public static List<String> parseFileToStringList() {
@@ -26,6 +25,7 @@ public class Task2 {
                     throw new IllegalArgumentException();
                 }
             }
+            scanner.close();
             return people;
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");

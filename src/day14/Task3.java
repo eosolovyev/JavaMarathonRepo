@@ -11,7 +11,6 @@ public class Task3 {
         System.out.println(parseFileToObjList());
 
     }
-
     public static List<Person> parseFileToObjList() {
 
         List<Person> people = new ArrayList<>();
@@ -29,12 +28,12 @@ public class Task3 {
                 Person person = new Person(personArray[0], Integer.parseInt(personArray[1]));
                 people.add(person);
             }
+            scanner.close();
             return people;
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         } catch (IllegalArgumentException i) {
             System.out.println("Некорректный входной файл");
-
         }
         return null;
     }

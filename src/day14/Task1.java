@@ -19,7 +19,7 @@ public class Task1 {
                 sum += Integer.parseInt(number);
             }
             System.out.println("Сумма чисел: " + sum);
-
+            scanner.close();
         } catch (FileNotFoundException e1) {
             System.out.println("Файл не найден");
             e1.printStackTrace();
